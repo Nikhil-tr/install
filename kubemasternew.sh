@@ -12,6 +12,7 @@ sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/insta
 sudo chmod 755 /tmp/installK8S.sh
 sudo bash /tmp/installK8S.sh
 kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.1/manifests/calico.yaml
+
 sudo kubeadm init --cri-socket unix:///var/run/cri-dockerd.sock --ignore-preflight-errors=all
 sudo mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
